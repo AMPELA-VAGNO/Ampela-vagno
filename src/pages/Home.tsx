@@ -3,6 +3,7 @@ import HeroSection from "../components/home/HeroSection";
 import MissionSection from "../components/home/MissionSection";
 import AgrSection from "../components/home/AgrSection";
 import ZoneInterventionSection from "../components/home/ZoneInterventionSection";
+import PaysagesGallery from "../components/home/PaysagesGallery";
 import FounderSection from "../components/home/FounderSection";
 import VisionSection from "../components/home/VisionSection";
 import { images } from "../data/images";
@@ -34,7 +35,7 @@ export default function Home() {
         objectives={objectifsSpecifiques}
         primaryImage={images.groupeFemmesAtelier}
         secondaryImage={images.groupeCouture}
-        tertiaryImage={images.reunionVillage2}
+        tertiaryImage={images.paysageBaobabCactus}
         quaternaryImage={images.bebe}
         linkTo="/qui-sommes-nous"
       />
@@ -42,11 +43,18 @@ export default function Home() {
       <AgrSection items={agr} />
 
       <ZoneInterventionSection
-        image={images.brousseAnimaux}
         region={zoneIntervention.region}
         district={zoneIntervention.district}
         villages={zoneIntervention.villages}
         description="Une zone marquée par le réchauffement climatique, la sécheresse récurrente et le Kere (famine chronique), qui fragilise davantage la condition des femmes et des jeunes filles."
+      />
+
+      <PaysagesGallery
+        images={[
+          { src: images.paysageFiguiersBarbarie, alt: "Figuiers de barbarie dans le Sud aride de Madagascar" },
+          { src: images.paysageCharretteEau, alt: "Corvée d'eau dans un village autour d'Ejeda" },
+          { src: images.paysageEnclosPeint, alt: "Enclos traditionnel peint près d'Ejeda" },
+        ]}
       />
 
       <FounderSection

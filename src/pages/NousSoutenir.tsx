@@ -1,10 +1,19 @@
 import { Heart, HandHeart, Package, Megaphone, Mail, ArrowRight } from "lucide-react";
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
+import VolunteerForm from "../components/VolunteerForm";
 import { images } from "../data/images";
 import { contact, budget } from "../data/content";
+import { Link } from "react-router-dom";
 
-const facons = [
+type Facon = {
+  icon: typeof Heart;
+  titre: string;
+  description: string;
+  anchor?: string;
+};
+
+const facons: Facon[] = [
   {
     icon: Heart,
     titre: "Faire un don financier",
@@ -22,6 +31,7 @@ const facons = [
     titre: "Devenir bénévole sur le terrain",
     description:
       "Partagez vos compétences (formation, santé, artisanat) directement auprès des femmes des 6 villages cibles, aux côtés de l'équipe d'Ampela Vagno.",
+    anchor: "#benevole",
   },
   {
     icon: Megaphone,
@@ -38,7 +48,7 @@ export default function NousSoutenir() {
         eyebrow="Nous soutenir"
         title="Chaque geste compte pour faire bouger les lignes"
         description="Votre contribution compte pour faire changer les mentalités et les comportements dans le Grand Sud de Madagascar."
-        image={images.palmiers2}
+        image={images.paysageSudEjeda}
       />
 
       {/* FACONS DE SOUTENIR */}
@@ -51,11 +61,8 @@ export default function NousSoutenir() {
           <div className="grid md:grid-cols-2 gap-6">
             {facons.map((f) => {
               const Icon = f.icon;
-              return (
-                <div
-                  key={f.titre}
-                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5"
-                >
+              const content = (
+                <>
                   <span className="w-14 h-14 rounded-2xl bg-white text-terracotta-600 flex items-center justify-center shrink-0 shadow-sm">
                     <Icon size={24} />
                   </span>
@@ -66,13 +73,37 @@ export default function NousSoutenir() {
                     <p className="text-ink-600 text-sm leading-relaxed">
                       {f.description}
                     </p>
+                    {f.anchor && (
+                      <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-terracotta-600">
+                        Remplir le formulaire
+                        <ArrowRight size={14} />
+                      </span>
+                    )}
                   </div>
+                </>
+              );
+              return f.anchor ? (
+                <a
+                  key={f.titre}
+                  href={f.anchor}
+                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5 transition-shadow hover:shadow-md hover:border-terracotta-200"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={f.titre}
+                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5"
+                >
+                  {content}
                 </div>
               );
             })}
           </div>
         </div>
       </section>
+
+      <VolunteerForm email={contact.email} />
 
       {/* BUDGET CONTEXT */}
       <section className="section-padding bg-ink-900 text-white">
@@ -94,8 +125,8 @@ export default function NousSoutenir() {
             <p className="text-white/70 text-sm">{budget.note}</p>
           </div>
           <img
-            src={images.sunset1}
-            alt="Coucher de soleil sur le Sud de Madagascar"
+            src={images.cuisineAV}
+            alt="Atelier cuisine d'Ampela Vagno"
             className="rounded-2xl object-cover w-full h-[380px] shadow-2xl"
           />
         </div>
@@ -112,15 +143,10 @@ export default function NousSoutenir() {
             Contactez directement la présidente de l'association pour
             organiser votre don, votre mission bénévole ou votre partenariat.
           </p>
-          <a
-            href={`mailto:${contact.email}?subject=${encodeURIComponent(
-              "Soutien à l'association Ampela Vagno"
-            )}`}
-            className="btn-primary"
-          >
+          <Link to="/contact" className="btn-primary">
             Écrire à Ampela Vagno
             <ArrowRight size={16} />
-          </a>
+          </Link>
           <p className="text-ink-500 text-sm mt-4">
             {contact.email} · {contact.tel}
           </p>
