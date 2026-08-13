@@ -37,8 +37,8 @@ export default function QuiSommesNous() {
             </p>
           </div>
           <img
-            src={images.reunionVillage1}
-            alt="Réunion de femmes sous un abri traditionnel"
+            src={images.marcheEjeda}
+            alt="Marché près d'Ejeda, dans le Sud de Madagascar"
             className="rounded-2xl object-cover w-full h-[420px] shadow-xl"
           />
         </div>

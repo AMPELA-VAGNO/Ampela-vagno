@@ -1,7 +1,7 @@
 import SectionHeading from "../SectionHeading";
+import MadagascarMap from "./MadagascarMap";
 
 type ZoneInterventionSectionProps = {
-  image: string;
   region: string;
   district: string;
   villages: string[];
@@ -9,7 +9,6 @@ type ZoneInterventionSectionProps = {
 };
 
 export default function ZoneInterventionSection({
-  image,
   region,
   district,
   villages,
@@ -19,11 +18,7 @@ export default function ZoneInterventionSection({
     <section className="section-padding bg-white">
       <div className="container-custom grid lg:grid-cols-2 gap-14 items-center">
         <div className="order-2 lg:order-1 relative">
-          <img
-            src={image}
-            alt="Paysage du Sud de Madagascar"
-            className="rounded-2xl object-cover w-full h-[420px] shadow-xl"
-          />
+          <MadagascarMap />
           <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-5 max-w-[220px] hidden md:block">
             <p className="font-display font-bold text-3xl text-terracotta-600">6</p>
             <p className="text-sm text-ink-600">villages engagés autour d'Ejeda</p>

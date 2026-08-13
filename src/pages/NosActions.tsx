@@ -37,7 +37,7 @@ export default function NosActions() {
         eyebrow="Nos actions"
         title="Cinq axes d'intervention au service de l'autonomie des femmes"
         description="De la formation entre pairs à l'éducation à la sexualité, chaque action vise un objectif commun : rendre les femmes actrices de leur vie."
-        image={images.groupeFemmesAtelier}
+        image={images.sensibilisationCouture}
       />
 
       {/* OBJECTIF GLOBAL */}

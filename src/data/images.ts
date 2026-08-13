@@ -14,4 +14,12 @@ export const images = {
   materielAgr: "/images/materiel_agr.jpg",
   reunionVillage1: "/images/reunion_village1.jpg",
   reunionVillage2: "/images/reunion_village2.jpg",
+  paysageBaobabCactus: "/images/paysage_baobab_cactus.jpg",
+  paysageFiguiersBarbarie: "/images/paysage_figuiers_barbarie.jpg",
+  paysageCharretteEau: "/images/paysage_charrette_eau.jpg",
+  paysageEnclosPeint: "/images/paysage_enclos_peint.jpg",
+  marcheEjeda: "/images/marche_ejeda.jpg",
+  sensibilisationCouture: "/images/sensibilisation_couture.jpg",
+  paysageSudEjeda: "/images/paysage_sud_ejeda.jpg",
+  cuisineAV: "/images/cuisine_av.jpg",
 };
