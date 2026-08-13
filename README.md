@@ -51,3 +51,4 @@ Toutes les données textuelles proviennent des documents officiels fournis par l
 - **Statut** : ✅ Prêt pour déploiement (build validé en local)
 - **Stack** : React 19 + TypeScript + Vite 8 + TailwindCSS 3 + react-router-dom 7 + lucide-react
 - **Dernière mise à jour** : 2026-08-07
+# Ampela-vagno
