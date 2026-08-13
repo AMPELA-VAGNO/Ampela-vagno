@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        terracotta: {
+          50: "#fdf3ee",
+          100: "#fbe4d6",
+          200: "#f6c6ad",
+          300: "#efa279",
+          400: "#e57a49",
+          500: "#dc5a28",
+          600: "#c1440e",
+          700: "#9e360d",
+          800: "#7f2d10",
+          900: "#692710",
+        },
+        savane: {
+          50: "#fbf8ec",
+          100: "#f5edcf",
+          200: "#ecd99f",
+          300: "#e0c069",
+          400: "#d4a63f",
+          500: "#c58c2c",
+          600: "#a76c23",
+          700: "#854f20",
+          800: "#6d411f",
+          900: "#5c371e",
+        },
+        baobab: {
+          50: "#f2f7f0",
+          100: "#e0ebdb",
+          200: "#c1d8b8",
+          300: "#9bbf8d",
+          400: "#75a366",
+          500: "#568649",
+          600: "#436a39",
+          700: "#37542f",
+          800: "#2e4428",
+          900: "#273a23",
+        },
+        ink: {
+          50: "#f6f5f3",
+          100: "#e8e4de",
+          200: "#d1c8ba",
+          300: "#aea08a",
+          400: "#8b7862",
+          500: "#6e5c49",
+          600: "#584a3b",
+          700: "#463c30",
+          800: "#3a3229",
+          900: "#332c25",
+        },
+      },
+      fontFamily: {
+        display: ["Poppins", "system-ui", "sans-serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+      },
+      backgroundImage: {
+        "sunset-gradient": "linear-gradient(135deg, #c1440e 0%, #dc5a28 40%, #d4a63f 100%)",
+      },
+    },
+  },
+  plugins: [],
+}

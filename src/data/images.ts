@@ -1,0 +1,17 @@
+// Images fournies par l'association, utilisées à travers le site
+export const images = {
+  sunset1: "/images/sunset1.jpg",
+  sunset2: "/images/sunset2.jpg",
+  sunset3: "/images/sunset3.jpg",
+  palmiers1: "/images/palmiers1.jpg",
+  palmiers2: "/images/palmiers2.jpg",
+  brousseAnimaux: "/images/brousse_animaux.jpg",
+  bebe: "/images/bebe.jpg",
+  groupeFemmesAtelier: "/images/groupe_femmes_atelier.jpg",
+  selfieFondatrice1: "/images/selfie_fondatrice1.jpg",
+  groupeCouture: "/images/groupe_couture.jpg",
+  selfieFondatrice2: "/images/selfie_fondatrice2.jpg",
+  materielAgr: "/images/materiel_agr.jpg",
+  reunionVillage1: "/images/reunion_village1.jpg",
+  reunionVillage2: "/images/reunion_village2.jpg",
+};
