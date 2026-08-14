@@ -25,7 +25,8 @@ export default function Contact() {
         eyebrow="Contact"
         title="Parlons ensemble de votre engagement"
         description="Une question, un projet de partenariat, une envie de rejoindre l'association ? Écrivez-nous."
-        image={images.palmiers1}
+        image={images.sousVoiture}
+        imagePosition="center 54%"
       />
 
       <section className="section-padding bg-white">

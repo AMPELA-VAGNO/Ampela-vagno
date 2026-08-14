@@ -23,4 +23,5 @@ export const images = {
   paysageSudEjeda: "/images/paysage_sud_ejeda.jpg",
   cuisineAV: "/images/cuisine_av.jpg",
   cuisineDehors: "/images/cuisine_dehors.jpeg",
+  sousVoiture: "/images/sous_voiture.jpeg",
 };
