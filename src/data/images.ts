@@ -22,4 +22,5 @@ export const images = {
   sensibilisationCouture: "/images/sensibilisation_couture.jpg",
   paysageSudEjeda: "/images/paysage_sud_ejeda.jpg",
   cuisineAV: "/images/cuisine_av.jpg",
+  cuisineDehors: "/images/cuisine_dehors.jpeg",
 };

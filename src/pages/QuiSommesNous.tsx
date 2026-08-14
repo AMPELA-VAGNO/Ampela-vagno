@@ -48,7 +48,7 @@ export default function QuiSommesNous() {
       <section id="contexte" className="section-padding bg-savane-50">
         <div className="container-custom grid lg:grid-cols-2 gap-14 items-center">
           <img
-            src={images.brousseAnimaux}
+            src={images.cuisineDehors}
             alt="Paysage rural du Sud de Madagascar"
             className="rounded-2xl object-cover w-full h-[460px] shadow-xl order-2 lg:order-1"
           />
