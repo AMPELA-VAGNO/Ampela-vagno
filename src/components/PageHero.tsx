@@ -1,26 +1,37 @@
-interface Props {
+interface PageHeroProps {
   eyebrow: string;
   title: string;
   description?: string;
   image: string;
+  /** Position verticale de l'image : "center" par défaut, "center 75%" pour montrer le bas, etc. */
+  imagePosition?: string;
 }
 
-export default function PageHero({ eyebrow, title, description, image }: Props) {
+export default function PageHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  imagePosition = "center",
+}: PageHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={image} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 via-ink-900/60 to-ink-900/85" />
-      </div>
-      <div className="container-custom relative z-10 text-center">
-        <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-white/15 text-white">
+    <section className="relative flex h-[68vh] min-h-[460px] items-center justify-center overflow-hidden">
+      <img
+        src={image}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition: imagePosition }}
+      />
+      <div className="absolute inset-0 bg-ink-900/50" />
+      <div className="relative z-10 container-custom px-4 text-center text-white">
+        <span className="mb-6 inline-block rounded-full bg-white/20 px-4 py-2 text-xs font-bold uppercase tracking-widest backdrop-blur">
           {eyebrow}
         </span>
-        <h1 className="font-display font-bold text-3xl md:text-5xl text-white max-w-3xl mx-auto leading-tight">
+        <h1 className="font-display mb-5 text-4xl font-extrabold md:text-6xl">
           {title}
         </h1>
         {description && (
-          <p className="mt-5 text-white/85 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          <p className="mx-auto max-w-2xl text-lg text-white/85 md:text-xl">
             {description}
           </p>
         )}
