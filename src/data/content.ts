@@ -271,7 +271,7 @@ export const versChangementDurable = {
 };
 
 export const contact = {
-  email: "kareen.nicolessi@gmail.com",
+  email: "mioramh@gmail.com",
   tel: "+261 34 17 389 46",
   adresse: "Lot II H 41 C Ankerana 101, Antananarivo, Madagascar",
   zoneTerrain: "Ejeda, District Ampanihy Ouest, Région Antsimo-Andrefana, Madagascar",
