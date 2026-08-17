@@ -103,7 +103,7 @@ export default function NousSoutenir() {
         </div>
       </section>
 
-      <VolunteerForm email={contact.email} />
+      <VolunteerForm />
 
       {/* BUDGET CONTEXT */}
       <section className="section-padding bg-ink-900 text-white">
