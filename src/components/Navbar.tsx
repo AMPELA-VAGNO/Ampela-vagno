@@ -25,6 +25,7 @@ const navItems: NavItem[] = [
       { label: "Réalisations & perspectives", path: "/nos-actions#realisations" },
     ],
   },
+  { label: "Journal de terrain", path: "/journal-terrain" },
   { label: "Notre impact", path: "/notre-impact" },
   { label: "Nous soutenir", path: "/nous-soutenir" },
   { label: "Contact", path: "/contact" },

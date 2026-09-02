@@ -24,4 +24,6 @@ export const images = {
   cuisineAV: "/images/cuisine_av.jpg",
   cuisineDehors: "/images/cuisine_dehors.jpeg",
   sousVoiture: "/images/sous_voiture.jpeg",
+  formatriceCoutureEjeda: "/images/formatrice_couture_ejeda.jpg",
+  fondatricePrincipale: "/images/selfie_fondatrice_principale.jpg",
 };

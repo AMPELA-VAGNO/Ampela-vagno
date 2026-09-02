@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import QuiSommesNous from "./pages/QuiSommesNous";
 import NosActions from "./pages/NosActions";
+import JournalTerrain from "./pages/JournalTerrain";
 import NotreImpact from "./pages/NotreImpact";
 import NousSoutenir from "./pages/NousSoutenir";
 import Contact from "./pages/Contact";
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
           <Route path="/nos-actions" element={<NosActions />} />
+          <Route path="/journal-terrain" element={<JournalTerrain />} />
           <Route path="/notre-impact" element={<NotreImpact />} />
           <Route path="/nous-soutenir" element={<NousSoutenir />} />
           <Route path="/contact" element={<Contact />} />
