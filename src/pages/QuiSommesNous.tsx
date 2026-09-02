@@ -95,13 +95,13 @@ export default function QuiSommesNous() {
       <section className="section-padding bg-ink-900 text-white">
         <div className="container-custom grid lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
           <img
-            src={images.selfieFondatrice1}
+            src={images.fondatricePrincipale}
             alt={identite.presidente.nom}
             className="rounded-2xl object-cover w-full h-[400px] shadow-2xl"
           />
           <div>
             <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-white/15 text-white">
-              Principale responsable
+              Responsable principale
             </span>
             <h3 className="font-display font-bold text-2xl md:text-3xl mb-2">
               {identite.presidente.nom}
@@ -123,6 +123,26 @@ export default function QuiSommesNous() {
                 </a>
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEMME LEADER EJEDA */}
+      <section className="section-padding bg-savane-50">
+        <div className="container-custom grid lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
+          <img
+            src={images.formatriceCoutureEjeda}
+            alt="Femme leader d'Ejeda et formatrice couture"
+            className="rounded-2xl object-cover w-full h-[360px] shadow-xl"
+          />
+          <div>
+            <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-terracotta-100 text-terracotta-700">
+              Sur le terrain
+            </span>
+            <h3 className="font-display font-bold text-2xl md:text-3xl text-ink-900 mb-2">
+              Femme leader d'Ejeda
+            </h3>
+            <p className="text-terracotta-600 font-medium">Formatrice couture</p>
           </div>
         </div>
       </section>
