@@ -9,9 +9,11 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-11 h-11 rounded-full bg-sunset-gradient flex items-center justify-center text-white font-display font-bold text-lg">
-              AV
-            </span>
+            <img
+              src="/images/ampela.jpg"
+              alt="Ampela Vagno"
+              className="w-11 h-11 rounded-full object-cover"
+            />
             <span className="font-display font-bold text-lg text-white">
               Ampela Vagno
             </span>
