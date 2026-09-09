@@ -1,7 +1,6 @@
 import { Heart, HandHeart, Package, Megaphone, Mail, ArrowRight } from "lucide-react";
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import VolunteerForm from "../components/VolunteerForm";
 import { images } from "../data/images";
 import { contact, budget } from "../data/content";
 import { Link } from "react-router-dom";
@@ -10,7 +9,6 @@ type Facon = {
   icon: typeof Heart;
   titre: string;
   description: string;
-  anchor?: string;
 };
 
 const facons: Facon[] = [
@@ -31,7 +29,6 @@ const facons: Facon[] = [
     titre: "Devenir bénévole sur le terrain",
     description:
       "Partagez vos compétences (formation, santé, artisanat) directement auprès des femmes des 6 villages cibles, aux côtés de l'équipe d'Ampela Vagno.",
-    anchor: "#benevole",
   },
   {
     icon: Megaphone,
@@ -61,8 +58,12 @@ export default function NousSoutenir() {
           <div className="grid md:grid-cols-2 gap-6">
             {facons.map((f) => {
               const Icon = f.icon;
-              const content = (
-                <>
+              return (
+                <Link
+                  key={f.titre}
+                  to="/formulaire"
+                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5 transition-shadow hover:shadow-md hover:border-terracotta-200"
+                >
                   <span className="w-14 h-14 rounded-2xl bg-white text-terracotta-600 flex items-center justify-center shrink-0 shadow-sm">
                     <Icon size={24} />
                   </span>
@@ -73,37 +74,17 @@ export default function NousSoutenir() {
                     <p className="text-ink-600 text-sm leading-relaxed">
                       {f.description}
                     </p>
-                    {f.anchor && (
-                      <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-terracotta-600">
-                        Remplir le formulaire
-                        <ArrowRight size={14} />
-                      </span>
-                    )}
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-terracotta-600">
+                      Remplir le formulaire
+                      <ArrowRight size={14} />
+                    </span>
                   </div>
-                </>
-              );
-              return f.anchor ? (
-                <a
-                  key={f.titre}
-                  href={f.anchor}
-                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5 transition-shadow hover:shadow-md hover:border-terracotta-200"
-                >
-                  {content}
-                </a>
-              ) : (
-                <div
-                  key={f.titre}
-                  className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5"
-                >
-                  {content}
-                </div>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
-
-      <VolunteerForm />
 
       {/* BUDGET CONTEXT */}
       <section className="section-padding bg-ink-900 text-white">

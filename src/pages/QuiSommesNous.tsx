@@ -12,6 +12,39 @@ import {
   beneficiaires,
 } from "../data/content";
 
+const membres = [
+  {
+  nom: "Hery Mahefantsoa RAKOTOMANGA",
+  role: "Secrétaire",
+  photo: images.heryMahefantsoa,
+  },
+  {
+    nom: "Yazz Christine RAZAFIHAY",
+    role: "Trésorière",
+    photo: images.yazzChristine,
+  },
+  {
+    nom: "Femme leader d'Ejeda",
+    role: "Formatrice couture",
+    photo: images.formatriceCoutureEjeda,
+  },
+  {
+    nom: "Eloi MAHAZOTANA",
+    role: "Coordinateur terrain",
+    photo: images.eloiMahazotana,
+  },
+  {
+    nom: "Ako RAJERIARISON",
+    role: "Conseiller en charge des projets",
+    photo: images.akoRajeriarison,
+  },
+  {
+    nom: "Antsa Fitia Mbolanirina",
+    role: "Community Manager",
+    photo: images.antsaFitia,
+  },
+];
+
 export default function QuiSommesNous() {
   return (
     <div>
@@ -91,58 +124,68 @@ export default function QuiSommesNous() {
         </div>
       </section>
 
-      {/* PRESIDENTE */}
-      <section className="section-padding bg-ink-900 text-white">
-        <div className="container-custom grid lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
-          <img
-            src={images.fondatricePrincipale}
-            alt={identite.presidente.nom}
-            className="rounded-2xl object-cover w-full h-[400px] shadow-2xl"
+      {/* EQUIPE */}
+      <section className="section-padding bg-savane-50">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="L'équipe"
+            title="Les personnes qui font vivre Ampela Vagno"
           />
-          <div>
-            <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-white/15 text-white">
-              Responsable principale
-            </span>
-            <h3 className="font-display font-bold text-2xl md:text-3xl mb-2">
-              {identite.presidente.nom}
-            </h3>
-            <p className="text-terracotta-300 font-medium mb-6">
-              {identite.presidente.titre}
-            </p>
-            <div className="space-y-3 text-white/85">
-              <p className="flex items-center gap-3">
-                <Mail size={18} className="text-terracotta-400" />
-                <a href={`mailto:${identite.presidente.email}`} className="hover:underline break-all">
-                  {identite.presidente.email}
-                </a>
+
+          {/* Présidente — mise en avant, traitement distinct du reste de l'équipe */}
+          <div className="rounded-3xl bg-ink-900 text-white p-8 md:p-10 grid md:grid-cols-[280px_1fr] gap-8 items-center mb-10">
+            <img
+              src={images.selfieFondatricePrincipale}
+              alt={identite.presidente.nom}
+              className="rounded-2xl object-cover w-full h-[300px] shadow-2xl"
+            />
+            <div>
+              <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-white/15 text-white">
+                Principale responsable
+              </span>
+              <h3 className="font-display font-bold text-2xl md:text-3xl mb-2">
+                {identite.presidente.nom}
+              </h3>
+              <p className="text-terracotta-300 font-medium mb-6">
+                {identite.presidente.titre}
               </p>
-              <p className="flex items-center gap-3">
-                <Phone size={18} className="text-terracotta-400" />
-                <a href={`tel:${identite.presidente.tel.replace(/\s/g, "")}`} className="hover:underline">
-                  {identite.presidente.tel}
-                </a>
-              </p>
+              <div className="space-y-3 text-white/85">
+                <p className="flex items-center gap-3">
+                  <Mail size={18} className="text-terracotta-400" />
+                  <a href={`mailto:${identite.presidente.email}`} className="hover:underline break-all">
+                    {identite.presidente.email}
+                  </a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <Phone size={18} className="text-terracotta-400" />
+                  <a href={`tel:${identite.presidente.tel.replace(/\s/g, "")}`} className="hover:underline">
+                    {identite.presidente.tel}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* FEMME LEADER EJEDA */}
-      <section className="section-padding bg-savane-50">
-        <div className="container-custom grid lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
-          <img
-            src={images.formatriceCoutureEjeda}
-            alt="Femme leader d'Ejeda et formatrice couture"
-            className="rounded-2xl object-cover w-full h-[360px] shadow-xl"
-          />
-          <div>
-            <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4 bg-terracotta-100 text-terracotta-700">
-              Sur le terrain
-            </span>
-            <h3 className="font-display font-bold text-2xl md:text-3xl text-ink-900 mb-2">
-              Femme leader d'Ejeda
-            </h3>
-            <p className="text-terracotta-600 font-medium">Formatrice couture</p>
+          {/* Autres membres — cartes plus compactes, format uniforme, taille fixe, écart horizontal réduit */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-4">
+            {membres.map((m) => (
+              <div
+                key={m.nom}
+                className="bg-savane-50 rounded-2xl border border-savane-100 overflow-hidden hover:shadow-md transition-shadow w-[290px] h-[315px] mx-auto flex flex-col"
+              >
+                <img
+                  src={m.photo}
+                  alt={m.nom}
+                  className="w-full h-[220px] object-cover"
+                />
+                <div className="p-5 flex-1 flex flex-col justify-center">
+                  <h3 className="font-display font-bold text-base text-ink-900 mb-0.5">
+                    {m.nom}
+                  </h3>
+                  <p className="text-terracotta-600 text-sm font-medium">{m.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

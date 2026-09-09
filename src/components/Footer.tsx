@@ -43,10 +43,10 @@ export default function Footer() {
         <div>
           <h4 className="font-display font-semibold text-white mb-4">Découvrir</h4>
           <ul className="space-y-2 text-sm text-ink-300">
-            <li><Link to="/qui-sommes-nous" className="hover:text-terracotta-400 transition-colors">Qui sommes-nous ?</Link></li>
+            <li><Link to="/notre-impact" className="hover:text-terracotta-400 transition-colors">Notre impact</Link></li>
+            <li><Link to="/qui-sommes-nous" className="hover:text-terracotta-400 transition-colors">Nous découvrir</Link></li>
             <li><Link to="/nos-actions" className="hover:text-terracotta-400 transition-colors">Nos actions</Link></li>
             <li><Link to="/journal-terrain" className="hover:text-terracotta-400 transition-colors">Journal de terrain</Link></li>
-            <li><Link to="/notre-impact" className="hover:text-terracotta-400 transition-colors">Notre impact</Link></li>
             <li><Link to="/nous-soutenir" className="hover:text-terracotta-400 transition-colors">Nous soutenir</Link></li>
             <li><Link to="/contact" className="hover:text-terracotta-400 transition-colors">Contact</Link></li>
           </ul>
