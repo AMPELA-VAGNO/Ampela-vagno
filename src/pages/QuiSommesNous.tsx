@@ -166,12 +166,12 @@ export default function QuiSommesNous() {
             </div>
           </div>
 
-          {/* Autres membres — cartes plus compactes, format uniforme, taille fixe, écart horizontal réduit */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-4">
+          {/* Autres membres — défilement horizontal avec cartes de largeur fixe */}
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
             {membres.map((m) => (
               <div
                 key={m.nom}
-                className="bg-savane-50 rounded-2xl border border-savane-100 overflow-hidden hover:shadow-md transition-shadow w-[290px] h-[315px] mx-auto flex flex-col"
+                className="bg-savane-50 rounded-2xl border border-savane-100 overflow-hidden hover:shadow-md transition-shadow w-[290px] h-[315px] shrink-0 snap-start flex flex-col"
               >
                 <img
                   src={m.photo}
