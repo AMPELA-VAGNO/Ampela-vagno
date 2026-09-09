@@ -58,7 +58,7 @@ export default function Home() {
       />
 
       <FounderSection
-        image={images.selfieFondatrice1}
+        image={images.selfieFondatricePrincipale}
         quote="« AMPELA VAGNO s'est constituée pour proposer à ces femmes une autre perspective d'avenir : basée sur le transfert intergénérationnel de savoir-faire manuels, l'autonomisation économique, et la solidarité entre femmes. »"
         name="Kareen NICOLESSI"
         role="Présidente et fondatrice, Ampela Vagno"

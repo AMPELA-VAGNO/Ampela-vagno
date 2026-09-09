@@ -163,7 +163,7 @@ export default function VolunteerForm() {
       <div className="container-custom grid lg:grid-cols-[1fr_1.2fr] gap-14 items-start">
         <div>
           <SectionHeading
-            eyebrow="Devenir bénévole"
+            eyebrow="Nous soutenir"
             title="Rejoignez l'équipe sur le terrain ou à distance"
             align="left"
           />

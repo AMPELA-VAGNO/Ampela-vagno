@@ -8,6 +8,7 @@ import NosActions from "./pages/NosActions";
 import JournalTerrain from "./pages/JournalTerrain";
 import NotreImpact from "./pages/NotreImpact";
 import NousSoutenir from "./pages/NousSoutenir";
+import Formulaire from "./pages/Formulaire";
 import Contact from "./pages/Contact";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/journal-terrain" element={<JournalTerrain />} />
           <Route path="/notre-impact" element={<NotreImpact />} />
           <Route path="/nous-soutenir" element={<NousSoutenir />} />
+          <Route path="/formulaire" element={<Formulaire />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

@@ -9,7 +9,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Accueil", path: "/" },
+  { label: "Notre impact", path: "/notre-impact" },
   {
     label: "Nous découvrir",
     children: [
@@ -26,7 +26,6 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Journal de terrain", path: "/journal-terrain" },
-  { label: "Notre impact", path: "/notre-impact" },
   { label: "Nous soutenir", path: "/nous-soutenir" },
   { label: "Contact", path: "/contact" },
 ];
@@ -76,7 +75,7 @@ export default function Navbar() {
             >
               {item.children ? (
                 <>
-                  <button className="flex items-center gap-1 px-3 py-2 rounded-lg hover:text-terracotta-600 hover:bg-terracotta-50 transition-colors">
+                  <button className="flex items-center gap-1 px-3 py-2 rounded-lg text-left hover:text-terracotta-600 hover:bg-terracotta-50 transition-colors">
                     {item.label}
                     <ChevronDown size={15} />
                   </button>
@@ -86,7 +85,7 @@ export default function Navbar() {
                         <li key={child.path}>
                           <Link
                             to={child.path}
-                            className="block px-4 py-2.5 text-sm hover:bg-terracotta-50 hover:text-terracotta-600 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-left hover:bg-terracotta-50 hover:text-terracotta-600 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -99,7 +98,7 @@ export default function Navbar() {
                 <NavLink
                   to={item.path!}
                   className={({ isActive }) =>
-                    `px-3 py-2 rounded-lg block hover:text-terracotta-600 hover:bg-terracotta-50 transition-colors ${
+                    `flex items-center gap-1 px-3 py-2 rounded-lg text-left hover:text-terracotta-600 hover:bg-terracotta-50 transition-colors ${
                       isActive ? "text-terracotta-600" : ""
                     }`
                   }
@@ -112,7 +111,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <Link to="/nous-soutenir" className="btn-primary text-sm">
+          <Link to="/formulaire" className="btn-primary text-sm">
             <Heart size={16} />
             Faire un don
           </Link>
@@ -167,7 +166,7 @@ export default function Navbar() {
             ))}
             <li className="pt-2">
               <Link
-                to="/nous-soutenir"
+                to="/formulaire"
                 className="btn-primary w-full justify-center"
                 onClick={() => setMobileOpen(false)}
               >
