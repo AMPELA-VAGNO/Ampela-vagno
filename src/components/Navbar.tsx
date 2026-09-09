@@ -56,9 +56,11 @@ export default function Navbar() {
     >
       <nav className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
-          <span className="w-11 h-11 rounded-full bg-sunset-gradient flex items-center justify-center text-white font-display font-bold text-lg shadow-md">
-            AV
-          </span>
+          <img
+            src="/images/ampela.jpg"
+            alt="Ampela Vagno"
+            className="w-11 h-11 rounded-full object-cover shadow-md"
+          />
           <span className="font-display font-bold text-lg md:text-xl leading-tight text-ink-900">
             Ampela<span className="text-terracotta-600"> Vagno</span>
           </span>
