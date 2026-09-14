@@ -9,6 +9,7 @@ type Facon = {
   icon: typeof Heart;
   titre: string;
   description: string;
+  type: "don-financier" | "don-materiel" | "benevolat" | "partenariat";
 };
 
 const facons: Facon[] = [
@@ -17,24 +18,28 @@ const facons: Facon[] = [
     titre: "Faire un don financier",
     description:
       "Contribuez au financement des Activités Génératrices de Revenus, du matériel, et des infrastructures (électrification solaire, accès à l'eau, locaux sécurisés).",
+    type: "don-financier",
   },
   {
     icon: Package,
     titre: "Faire un don en matériel",
     description:
       "Machines à coudre, ustensiles de cuisine, réchauds solaires, Serviettes Hygiéniques Lavables (SHL)… chaque équipement compte pour lancer un atelier.",
+    type: "don-materiel",
   },
   {
     icon: HandHeart,
     titre: "Devenir bénévole sur le terrain",
     description:
       "Partagez vos compétences (formation, santé, artisanat) directement auprès des femmes des 6 villages cibles, aux côtés de l'équipe d'Ampela Vagno.",
+    type: "benevolat",
   },
   {
     icon: Megaphone,
     titre: "Devenir partenaire ou relais",
     description:
       "Aidez-nous à faire connaître notre action, à distribuer les produits locaux à plus grande échelle, ou à nouer des partenariats institutionnels.",
+    type: "partenariat",
   },
 ];
 
@@ -61,7 +66,7 @@ export default function NousSoutenir() {
               return (
                 <Link
                   key={f.titre}
-                  to="/formulaire"
+                  to={`/formulaire?type=${f.type}`}
                   className="bg-savane-50 rounded-2xl p-8 border border-savane-100 flex gap-5 transition-shadow hover:shadow-md hover:border-terracotta-200"
                 >
                   <span className="w-14 h-14 rounded-2xl bg-white text-terracotta-600 flex items-center justify-center shrink-0 shadow-sm">
