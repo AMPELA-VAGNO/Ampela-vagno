@@ -57,7 +57,7 @@ export default function Navbar() {
       <nav className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
           <img
-            src="/images/ampela.jpg"
+            src="/images/ampela.png"
             alt="Ampela Vagno"
             className="w-11 h-11 rounded-full object-cover shadow-md"
           />
@@ -113,7 +113,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <Link to="/formulaire" className="btn-primary text-sm">
+          <Link to="/formulaire?type=don-financier" className="btn-primary text-sm">
             <Heart size={16} />
             Faire un don
           </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
             ))}
             <li className="pt-2">
               <Link
-                to="/formulaire"
+                to="/formulaire?type=don-financier"
                 className="btn-primary w-full justify-center"
                 onClick={() => setMobileOpen(false)}
               >
