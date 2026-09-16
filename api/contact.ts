@@ -58,7 +58,7 @@ export default async function handler(request: IncomingMessage, response: Server
     
     const mailOptions: any = {
       from: process.env.SMTP_FROM ?? `Site Ampela Vagno <${smtpUser}>`,
-      to: process.env.CONTACT_RECIPIENT ?? "mioramh@gmail.com",
+      to: process.env.CONTACT_RECIPIENT ?? "kareen.nicolessi@gmail.com",
       replyTo: email.trim(),
       subject: emailSubject,
     };

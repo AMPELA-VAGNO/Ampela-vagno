@@ -8,7 +8,6 @@ export interface JournalSection {
 export interface JournalEntry {
   id: string;
   village: string;
-  jour: string;
   region?: string;
   sections: JournalSection[];
   note?: string;
@@ -18,7 +17,6 @@ export const journalTerrain: JournalEntry[] = [
   {
     id: "ejeda",
     village: "Ejeda",
-    jour: "Jour 1",
     region: "Région Atsimo Andrefana",
     sections: [
       {
@@ -48,7 +46,6 @@ export const journalTerrain: JournalEntry[] = [
   {
     id: "ambolamena",
     village: "Ambolamena",
-    jour: "Jour 2",
     sections: [
       {
         paragraphes: [
@@ -64,7 +61,6 @@ export const journalTerrain: JournalEntry[] = [
   {
     id: "gogogogo",
     village: "Gogogogo",
-    jour: "Jour 3",
     sections: [
       {
         paragraphes: [
