@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Heart, Share2, Camera } from "lucide-react";
+import { Mail, Phone, MapPin, Heart, Camera } from "lucide-react";
 import { contact } from "../data/content";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="/images/ampela.jpg"
+              src="./public/images/ampela.png"
               alt="Ampela Vagno"
               className="w-11 h-11 rounded-full object-cover"
             />
@@ -24,13 +24,20 @@ export default function Footer() {
             mariages précoces et forcés.
           </p>
           <div className="flex gap-3 mt-5">
+            {/* CORRECTION ICI : Ajout de la balise <a> ouvrante */}
             <a
-              href="#"
-              aria-label="Réseaux sociaux"
+              href="https://web.facebook.com/profile.php?id=61571456145877"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Page Facebook"
               className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-terracotta-600 transition-colors"
             >
-              <Share2 size={16} />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
+              </svg>
             </a>
+            
+            {/* CORRECTION ICI : Ajout de la balise <a> ouvrante */}
             <a
               href="#"
               aria-label="Galerie photos"

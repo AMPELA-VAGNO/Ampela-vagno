@@ -41,9 +41,6 @@ export default function JournalTerrain() {
           {/* Contenu de l'onglet actif */}
           <div key={active.id}>
             <div className="flex items-baseline gap-3 mb-8 flex-wrap">
-              <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-terracotta-100 text-terracotta-700">
-                {active.jour}
-              </span>
               <h2 className="font-display font-bold text-2xl md:text-3xl text-ink-900">
                 {active.village}
               </h2>
