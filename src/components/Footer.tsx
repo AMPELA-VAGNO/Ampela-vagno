@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="./images/ampela.jpg"
+              src="./public/images/ampela.png"
               alt="Ampela Vagno"
               className="w-11 h-11 rounded-full object-cover"
             />
