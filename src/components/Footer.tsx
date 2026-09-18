@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="./public/images/ampela.png"
+              src="/images/ampela.png"
               alt="Ampela Vagno"
               className="w-11 h-11 rounded-full object-cover"
             />
@@ -24,7 +24,6 @@ export default function Footer() {
             mariages précoces et forcés.
           </p>
           <div className="flex gap-3 mt-5">
-            {/* CORRECTION ICI : Ajout de la balise <a> ouvrante */}
             <a
               href="https://web.facebook.com/profile.php?id=61571456145877"
               target="_blank"
@@ -37,7 +36,6 @@ export default function Footer() {
               </svg>
             </a>
             
-            {/* CORRECTION ICI : Ajout de la balise <a> ouvrante */}
             <a
               href="#"
               aria-label="Galerie photos"
