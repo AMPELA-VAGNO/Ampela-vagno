@@ -15,11 +15,14 @@ export default function DonateBanner() {
       </div>
       <div className="container-custom relative z-10 py-16 md:py-20 text-center">
         <h2 className="font-display font-bold text-2xl md:text-4xl text-white max-w-2xl mx-auto leading-tight">
-          Chaque geste compte pour faire bouger les lignes
+          Passez à l'action
         </h2>
         <p className="mt-4 text-white/90 max-w-xl mx-auto">
-          Votre contribution compte pour faire changer les mentalités et les
-          comportements dans le Grand Sud de Madagascar.
+          Parce que les femmes du Sud de Madagascar méritent de choisir leur
+          vie et d'être actrices de leur avenir. Chaque don ou partenariat
+          permet de financer les infrastructures de transformation, les
+          ateliers de conscientisation et le transfert de compétences sur le
+          terrain.
         </p>
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
           <Link
@@ -27,7 +30,7 @@ export default function DonateBanner() {
             className="btn-primary bg-white !text-terracotta-700 hover:bg-savane-50"
             style={{ backgroundColor: "white", color: "#9e360d" }}
           >
-            Je fais un don
+            Faire un don maintenant
             <ArrowRight size={16} />
           </Link>
           <Link
