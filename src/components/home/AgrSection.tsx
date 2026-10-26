@@ -1,6 +1,14 @@
 import type { ElementType } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, HeartHandshake, Scissors, ChefHat, Shirt } from "lucide-react";
+import {
+  ArrowRight,
+  ChefHat,
+  GraduationCap,
+  HeartHandshake,
+  Scissors,
+  Shirt,
+  Tractor,
+} from "lucide-react";
 import SectionHeading from "../SectionHeading";
 
 type AgrItem = {
@@ -11,24 +19,36 @@ type AgrItem = {
 
 type AgrSectionProps = {
   items: AgrItem[];
+  title?: string;
+  description?: string;
 };
 
 const iconMap: Record<string, ElementType> = {
   scissors: Scissors,
   "chef-hat": ChefHat,
   shirt: Shirt,
+  tractor: Tractor,
+  "graduation-cap": GraduationCap,
 };
 
-export default function AgrSection({ items }: AgrSectionProps) {
+export default function AgrSection({
+  items,
+  title = "3 Activités Génératrices de Revenus",
+  description = "Identifiées par les femmes elles-mêmes lors des ateliers de sensibilisation dans les 6 villages cibles.",
+}: AgrSectionProps) {
   return (
     <section className="section-padding bg-savane-50">
       <div className="container-custom">
         <SectionHeading
           eyebrow="Nos actions"
-          title="3 Activités Génératrices de Revenus"
-          description="Identifiées par les femmes elles-mêmes lors des ateliers de sensibilisation dans les 6 villages cibles."
+          title={title}
+          description={description}
         />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div
+          className={`grid gap-6 ${
+            items.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
+          }`}
+        >
           {items.map((item) => {
             const Icon = iconMap[item.icon] ?? HeartHandshake;
             return (
