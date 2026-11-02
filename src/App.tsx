@@ -1,7 +1,10 @@
+import { useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { trackPageView } from "./analytics";
 import Home from "./pages/Home";
 import QuiSommesNous from "./pages/QuiSommesNous";
 import NosActions from "./pages/NosActions";
@@ -12,6 +15,19 @@ import Formulaire from "./pages/Formulaire";
 import Contact from "./pages/Contact";
 
 export default function App() {
+  const { pathname, search, hash } = useLocation();
+  const lastTrackedPath = useRef<string | null>(null);
+  const currentPath = `${pathname}${search}${hash}`;
+
+  useEffect(() => {
+    if (lastTrackedPath.current === currentPath) {
+      return;
+    }
+
+    trackPageView(currentPath);
+    lastTrackedPath.current = currentPath;
+  }, [currentPath]);
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-ink-800">
       <ScrollToTop />
